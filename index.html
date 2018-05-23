@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>互動教學</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap的css樣式 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 自訂的css樣式 -->
+    <link href="./custom.css" rel="stylesheet">
+    
+    <!-- jQuery函式庫 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap的js函式庫 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 自訂的js程式碼檔案 -->
+    <script src="./custom.js"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/43febcb5c4.css">
+    <style>
+        html, body {
+            font-family:微軟正黑體, 標楷體, 微軟雅黑, Arial, Arial Black, Verdana, Georgia, Times New Roman, Trebuchet MS; 
+            height: 100%;
+            width: 100%;
+            font-size: 18px;
+            padding-top: 25px;
+        }
+
+        /* 文字大小 */
+        .text-center h1 {
+            font-size: 100px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 第1個區塊用 */
+        #home {
+            position: relative;   
+            background: url(images/home.jpg) no-repeat center center;
+            background-size: cover;
+            padding:33vh 0;
+            opacity: 0.8;
+        }
+        
+        .home_black {
+            padding:50px 0;
+            position:absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            background:rgba(0,0,0,0.5);
+        }
+        
+        /* 拉大間距 */
+        .top-bottom-pad {
+            padding: 50px 0;
+        }
+
+        /* 背景顏色與字的顏色*/
+        #services {
+           background-color: #433f72;
+           color: #ffffff;
+        }
+
+        /* 圖示字型的大小與外觀 */
+        #services .glyphicon {
+           border: 2px solid #FFFFFF;
+           border-radius: 50%;
+           display: inline-block;
+           font-size: 40px;
+           height: 100px;
+           line-height: 100px;
+           text-align: center;
+           vertical-align: middle;
+           width: 100px;
+           margin: 30px 0;
+        }
+        
+        #services .glyphicon:hover {
+            color:#edeba1;
+            border: 2px solid #edeba1;
+            font-size: 50px;
+        }
+        
+        /* 第4個區塊用 */
+        #info {
+            position: relative;
+            background: url(images/info.jpg) no-repeat center center fixed;
+            background-size: cover;
+            padding:10vh 0;
+            opacity: 0.95;
+        }
+        
+        /*#info {
+            position: relative;
+            background: #334660;
+            background: radial-gradient(#d8d67f 50%, #4f493c);
+            padding:10vh 0;
+            opacity: 0.9;
+        }*/
+
+        /* 第4個區塊中的新聞用 */
+        #info .panel {
+            opacity: 0.85;
+        }
+        
+        /*頁腳使用的樣式*/
+        footer {
+            background-color:#494949;
+            color:#ddd;
+            min-height:150px;
+            padding-top:20px;
+            padding-bottom:40px;
+        }
+
+        /*回到上方區塊使用的樣式*/
+        .scroll-top {
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            z-index:999;
+            font-size:24px;
+            background-color: #8f8f8f;
+        }
+        /* link: 平常的狀態, active: 按下後的狀態, visited: 訪問過後的狀態, hover: 滑鼠移到超連結上的狀態 */
+        .scroll-top a:link, .scroll-top a:visited {
+            color:#777;
+        }
+        
+        .social-buttons{
+            margin-bottom:0px;
+        }
+        .social-buttons li a{
+            display:block;
+            background-color:#222;
+            height:50px;
+            width:50px;
+            border-radius:50%;
+            font-size:30px;
+            line-height:50px;
+            color:#fff;
+            outline:0;
+        }
+        ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li a:hover{
+            background-color:#fed136;
+        }
+    </style>
+</head>
+<body>
+<!-- 第1個區塊 - 首頁 -->
+    <div id="home" class="home">
+      <div class="text-center">
+        <h1 style="color:#fff;text-shadow: 5px 5px 10px #262525;margin-bottom:30px">互動教學網頁</h1>
+        <a href="#about" class="btn btn-default btn-lg">關於我們</a>
+          <div class="home_black">
+              <h3 style="font-size:30px;color:#f4f4f4">簡單輕鬆學習，成就滿分！</h3>
+          </div>
+      </div>
+    </div>
+<!-- 第1個區塊 -->
+    
+<!-- 第2個區塊 - 關於我們 -->
+    <div id="about" class="top-bottom-pad">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/logo.jpg" class="img-rounded img-responsive" style="opacity: 0.9;" alt="" />
+          </div>
+          <div class="col-sm-6 text-center" style="display: table;width:500px; height:370px;border:solid 5px #ccc;">
+              <div style="display: table-cell;text-align: center;vertical-align: middle;">
+            <h2>Webduino介紹</h2><br>
+            <p>Webduino 這個名稱的由來，就是 Web 與 Arduino 這兩個單字的結合，可以使用Web控制Arduino。有別於傳統要寫C、C++才能控制Arduino，他可以透過WebComponents 的方法，讓使用者不用接觸C或C++的情況下，寫出簡單的網頁程式，就可以連接Webduino在更改方面也比較方便，不像Arduino每更改一次就必須重新燒錄。</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 第2個區塊 -->
+    
+   <nav class="navbar navbar-default navbar-fixed-top" style="opacity:0.95">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <!--給手機按鈕使用的-->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <!--給手機按鈕使用的-->
+
+        <!--  網站的Logo -->
+          <a class="navbar-brand" href="#">我的公司</a>
+        <!--  網站的Logo -->
+
+      </div>
+
+      <!-- 一般用的網站選單列 -->
+      <div id="navbar" class="navbar-collapse collapse ">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#home" class="move">首頁</a></li>
+            <li><a href="#about" class="move">關於我們</a></li>
+            <li><a href="#services" class="move">產品服務</a></li>
+            <li><a href="#info" class="move">最新資訊</a></li>
+        </ul>
+      </div>
+      <!-- 一般用的網站選單列 -->
+
+    </div>
+
+  </nav>
+    
+<!-- 第3區塊 - 產品服務 -->
+    <div id="services" class="top-bottom-pad">
+      <div class="container">
+        <h2 class="text-center">內部零件介紹</h2> <hr />
+        <div class="row text-center">
+          <div class="col-sm-3 col-xs-6">
+            <i class="glyphicon glyphicon-tag"> </i>
+            <h4>直流馬達</h4>
+            <p>透過直流電作為電源使其發動，在小型電器上應用比較廣泛透過自製遙控車我們可以更了解直流馬達的應用方式。</p>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <i class="glyphicon glyphicon-bookmark"> </i>
+            <h4>伺服馬達</h4>
+            <p>遙控車的轉向系統，伺服馬達可以透過程式的控制，使他的轉舵可以向左轉或者是向右轉，以達到遙控車轉向的需求。</p>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <i class="glyphicon glyphicon-paperclip"> </i>
+            <h4>齒輪組</h4>
+            <p>透過直流馬達帶動齒輪的轉動可以使車子前進，齒輪的大小差異也會影響車子的行進速度。</p>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <i class="glyphicon glyphicon-pushpin"> </i>
+            <h4>傳動軸</h4>
+            <p>他是一種機械元件，主要用於傳遞扭矩、旋轉，通常用於元件間距離較遠或不容易直接傳送的情況。像是汽車的前後輪。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 第3區塊 -->
+    
+<!-- 第4個區塊：最新資訊 -->
+    <div id="info" class="top-bottom-pad">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-cog" aria-hidden="true"></i>
+                        <h2 class="panel-title">齒輪組裝須知</h2>
+                    </li>
+                </ul>
+              </div>
+              <div class="panel-body lead">
+                腳踏車上的變速系統當大齒輪帶動小齒輪轉動時，車速會變快，但是所費的力氣比較大，比較適合在一般道路上當小齒輪帶動大齒輪轉動時，車速會變慢，但是所費的力氣比較小，較適合爬坡。
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-bullhorn" aria-hidden="true"></i>
+                        <h2 class="panel-title">敬請期待</h2>
+                    </li>
+                </ul>
+              </div>
+              <div class="panel-body lead">
+                更新中
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 第4個區塊 -->
+    
+<!-- 頁腳(footer) -->
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <p>電話：(XX)XXXXXXXX</p>
+                  <p>電子郵件：XXXXXe@gmail.com</p>
+              </div>
+              
+              <div class="col-md-4">
+                  <ul class="list-inline social-buttons" align="center">
+                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+                  </ul>
+              </div>
+              
+              <div class="col-md-4">
+                  <p class="text-right">版權所有 &copy; 我的公司 2017</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+<!-- 頁腳(footer) -->
+
+<!-- 回到上方的連結 -->
+    <ul class="nav pull-right scroll-top">
+      <li><a href="#home" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+    </ul>
+<!-- 回到上方的連結 -->
+    
+    <script>
+    $(document).ready(function (){
+    
+        /* 啟用 scrollspy 選單 */
+        $('body').scrollspy({
+          target: '#navbar',
+          offset: 50
+        });
+    });
+    </script>
+    
+    <script>
+      /*$("a.move").on("click", function() {
+        //使用 gethref 變數，來存取被點擊的連結，其href值
+        var gethref = $(this).attr('href');
+
+        //選到 body, html 兩的元素，透過 animate 動態，將其 srollTop 的位置，設定在 目標元素的 位置
+        $("body").animate({
+          scrollTop : $(gethref).position().top
+        }, 600);
+
+        //擋住超連結原本前往的動作
+        return false;
+      });*/
+    </script>
+</body>
+</html>
