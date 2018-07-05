@@ -146,6 +146,33 @@
         ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li a:hover{
             background-color:#fed136;
         }
+
+        .table-right {
+          display: table;
+          width:500px; 
+          height:370px;
+        }
+        .table-cell-right {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+        @media screen and (max-width: 500px) {
+          .table-right {
+            display: block;
+            width:95%; 
+            height:auto;
+            margin:0 10px;
+          }
+          .text-right {
+            text-align: center;
+            line-height: 50px;
+          }
+          .text-left {
+            text-align: center;
+            line-height: 50px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -168,8 +195,8 @@
           <div class="col-sm-6">
             <img src="images/logo.jpg" class="img-rounded img-responsive" style="opacity: 0.9;" alt="" />
           </div>
-          <div class="col-sm-6 text-center" style="display: table;width:500px; height:370px;border:solid 5px #ccc;">
-              <div style="display: table-cell;text-align: center;vertical-align: middle;">
+          <div class="col-sm-6 text-center table-right">
+              <div class="table-cell-right">
             <h2>Webduino介紹</h2><br>
             <p>Webduino 這個名稱的由來，就是 Web 與 Arduino 這兩個單字的結合，可以使用Web控制Arduino。有別於傳統要寫C、C++才能控制Arduino，他可以透過WebComponents 的方法，讓使用者不用接觸C或C++的情況下，寫出簡單的網頁程式，就可以連接Webduino在更改方面也比較方便，不像Arduino每更改一次就必須重新燒錄。</p>
               </div>
@@ -285,7 +312,7 @@
     <footer>
       <div class="container">
           <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 text-left">
                   <p>電話：(XX)XXXXXXXX</p>
                   <p>電子郵件：XXXXXe@gmail.com</p>
               </div>
